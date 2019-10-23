@@ -21,6 +21,10 @@ namespace KartinaProjet.Controllers
             return View(db.Artiste.ToList());
         }
 
+
+
+
+
         // GET: Artiste/Details/5
         public ActionResult Details(int? id)
         {
