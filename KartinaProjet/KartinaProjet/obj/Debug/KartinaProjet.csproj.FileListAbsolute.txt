@@ -81,3 +81,8 @@
 \\Mac\Home\Documents\2. Programmation AJC C sharp\Projet YellowKorner\KartinaRepo\KartinaProjet\KartinaProjet\obj\Debug\KartinaProjet.csproj.CopyComplete
 \\Mac\Home\Documents\2. Programmation AJC C sharp\Projet YellowKorner\KartinaRepo\KartinaProjet\KartinaProjet\obj\Debug\KartinaProjet.dll
 \\Mac\Home\Documents\2. Programmation AJC C sharp\Projet YellowKorner\KartinaRepo\KartinaProjet\KartinaProjet\obj\Debug\KartinaProjet.pdb
+\\Mac\Home\Documents\2. Programmation AJC C sharp\Projet YellowKorner\KartinaRepo\KartinaProjet\KartinaProjet\bin\EntityFramework.dll
+\\Mac\Home\Documents\2. Programmation AJC C sharp\Projet YellowKorner\KartinaRepo\KartinaProjet\KartinaProjet\bin\EntityFramework.SqlServer.dll
+\\Mac\Home\Documents\2. Programmation AJC C sharp\Projet YellowKorner\KartinaRepo\KartinaProjet\KartinaProjet\bin\EntityFramework.xml
+\\Mac\Home\Documents\2. Programmation AJC C sharp\Projet YellowKorner\KartinaRepo\KartinaProjet\KartinaProjet\bin\EntityFramework.SqlServer.xml
+\\Mac\Home\Documents\2. Programmation AJC C sharp\Projet YellowKorner\KartinaRepo\KartinaProjet\KartinaProjet\bin\fr\EntityFramework.resources.dll
