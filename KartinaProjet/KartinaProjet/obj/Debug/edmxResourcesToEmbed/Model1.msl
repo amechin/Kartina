@@ -1,0 +1,254 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="KartinaProjetModelStoreContainer" CdmEntityContainer="KartinaProjetEntities">
+    <EntitySetMapping Name="Admin">
+      <EntityTypeMapping TypeName="KartinaProjetModel.Admin">
+        <MappingFragment StoreEntitySet="Admin">
+          <ScalarProperty Name="IdAdmin" ColumnName="IdAdmin" />
+          <ScalarProperty Name="Nom" ColumnName="Nom" />
+          <ScalarProperty Name="Identifiant" ColumnName="Identifiant" />
+          <ScalarProperty Name="MotDePasse" ColumnName="MotDePasse" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Adresse">
+      <EntityTypeMapping TypeName="KartinaProjetModel.Adresse">
+        <MappingFragment StoreEntitySet="Adresse">
+          <ScalarProperty Name="IdAdresse" ColumnName="IdAdresse" />
+          <ScalarProperty Name="Numero" ColumnName="Numero" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="Adresse1" ColumnName="Adresse" />
+          <ScalarProperty Name="CodePostal" ColumnName="CodePostal" />
+          <ScalarProperty Name="Ville" ColumnName="Ville" />
+          <ScalarProperty Name="Pays" ColumnName="Pays" />
+          <ScalarProperty Name="LibelleAdresse" ColumnName="LibelleAdresse" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Aide">
+      <EntityTypeMapping TypeName="KartinaProjetModel.Aide">
+        <MappingFragment StoreEntitySet="Aide">
+          <ScalarProperty Name="IdAide" ColumnName="IdAide" />
+          <ScalarProperty Name="Nom" ColumnName="Nom" />
+          <ScalarProperty Name="Prenom" ColumnName="Prenom" />
+          <ScalarProperty Name="Mail" ColumnName="Mail" />
+          <ScalarProperty Name="IdSujet" ColumnName="IdSujet" />
+          <ScalarProperty Name="Message" ColumnName="Message" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Artiste">
+      <EntityTypeMapping TypeName="KartinaProjetModel.Artiste">
+        <MappingFragment StoreEntitySet="Artiste">
+          <ScalarProperty Name="IdArtiste" ColumnName="IdArtiste" />
+          <ScalarProperty Name="Nom" ColumnName="Nom" />
+          <ScalarProperty Name="Prenom" ColumnName="Prenom" />
+          <ScalarProperty Name="Pays" ColumnName="Pays" />
+          <ScalarProperty Name="Presentation" ColumnName="Presentation" />
+          <ScalarProperty Name="Facebook" ColumnName="Facebook" />
+          <ScalarProperty Name="Pinterest" ColumnName="Pinterest" />
+          <ScalarProperty Name="twitter" ColumnName="twitter" />
+          <ScalarProperty Name="Pseudonyme" ColumnName="Pseudonyme" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Cadre">
+      <EntityTypeMapping TypeName="KartinaProjetModel.Cadre">
+        <MappingFragment StoreEntitySet="Cadre">
+          <ScalarProperty Name="IdCadre" ColumnName="IdCadre" />
+          <ScalarProperty Name="Nom" ColumnName="Nom" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Coefficient" ColumnName="Coefficient" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Commande">
+      <EntityTypeMapping TypeName="KartinaProjetModel.Commande">
+        <MappingFragment StoreEntitySet="Commande">
+          <ScalarProperty Name="IdCde" ColumnName="IdCde" />
+          <ScalarProperty Name="IdUtilisateur" ColumnName="IdUtilisateur" />
+          <ScalarProperty Name="DateCommande" ColumnName="DateCommande" />
+          <ScalarProperty Name="Panier" ColumnName="Panier" />
+          <ScalarProperty Name="PrixTotal" ColumnName="PrixTotal" />
+          <ScalarProperty Name="Statut" ColumnName="Statut" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Finition">
+      <EntityTypeMapping TypeName="KartinaProjetModel.Finition">
+        <MappingFragment StoreEntitySet="Finition">
+          <ScalarProperty Name="IdFinition" ColumnName="IdFinition" />
+          <ScalarProperty Name="Nom" ColumnName="Nom" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="coefficient" ColumnName="coefficient" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Format">
+      <EntityTypeMapping TypeName="KartinaProjetModel.Format">
+        <MappingFragment StoreEntitySet="Format">
+          <ScalarProperty Name="IdFormat" ColumnName="IdFormat" />
+          <ScalarProperty Name="Libelle" ColumnName="Libelle" />
+          <ScalarProperty Name="Coefficient" ColumnName="Coefficient" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="KartinaMajoration">
+      <EntityTypeMapping TypeName="KartinaProjetModel.KartinaMajoration">
+        <MappingFragment StoreEntitySet="KartinaMajoration">
+          <ScalarProperty Name="IdMajoration" ColumnName="IdMajoration" />
+          <ScalarProperty Name="coeff" ColumnName="coeff" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="NbrTirageMax">
+      <EntityTypeMapping TypeName="KartinaProjetModel.NbrTirageMax">
+        <MappingFragment StoreEntitySet="NbrTirageMax">
+          <ScalarProperty Name="IDTirage" ColumnName="IDTirage" />
+          <ScalarProperty Name="TirageMax" ColumnName="TirageMax" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Orientation">
+      <EntityTypeMapping TypeName="KartinaProjetModel.Orientation">
+        <MappingFragment StoreEntitySet="Orientation">
+          <ScalarProperty Name="IdOrientation" ColumnName="IdOrientation" />
+          <ScalarProperty Name="Libelle" ColumnName="Libelle" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Photo">
+      <EntityTypeMapping TypeName="KartinaProjetModel.Photo">
+        <MappingFragment StoreEntitySet="Photo">
+          <ScalarProperty Name="IdPhoto" ColumnName="IdPhoto" />
+          <ScalarProperty Name="NomPh" ColumnName="NomPh" />
+          <ScalarProperty Name="LienURL" ColumnName="LienURL" />
+          <ScalarProperty Name="NbTirages" ColumnName="NbTirages" />
+          <ScalarProperty Name="StockRestant" ColumnName="StockRestant" />
+          <ScalarProperty Name="NbVentes" ColumnName="NbVentes" />
+          <ScalarProperty Name="PrixMini" ColumnName="PrixMini" />
+          <ScalarProperty Name="DateMiseEnLigne" ColumnName="DateMiseEnLigne" />
+          <ScalarProperty Name="IdOrientation" ColumnName="IdOrientation" />
+          <ScalarProperty Name="IdArtiste" ColumnName="IdArtiste" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Sujet">
+      <EntityTypeMapping TypeName="KartinaProjetModel.Sujet">
+        <MappingFragment StoreEntitySet="Sujet">
+          <ScalarProperty Name="IdSujet" ColumnName="IdSujet" />
+          <ScalarProperty Name="Sujet1" ColumnName="Sujet" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tag">
+      <EntityTypeMapping TypeName="KartinaProjetModel.Tag">
+        <MappingFragment StoreEntitySet="Tag">
+          <ScalarProperty Name="IdTag" ColumnName="IdTag" />
+          <ScalarProperty Name="NomTag" ColumnName="NomTag" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Taille">
+      <EntityTypeMapping TypeName="KartinaProjetModel.Taille">
+        <MappingFragment StoreEntitySet="Taille">
+          <ScalarProperty Name="IdTaille" ColumnName="IdTaille" />
+          <ScalarProperty Name="Hauteur" ColumnName="Hauteur" />
+          <ScalarProperty Name="Largeur" ColumnName="Largeur" />
+          <ScalarProperty Name="unite" ColumnName="unite" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Theme">
+      <EntityTypeMapping TypeName="KartinaProjetModel.Theme">
+        <MappingFragment StoreEntitySet="Theme">
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="UrlImage" ColumnName="UrlImage" />
+          <ScalarProperty Name="Slogan" ColumnName="Slogan" />
+          <ScalarProperty Name="IdTheme" ColumnName="IdTheme" />
+          <ScalarProperty Name="Libelle" ColumnName="Libelle" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Utilisateur">
+      <EntityTypeMapping TypeName="KartinaProjetModel.Utilisateur">
+        <MappingFragment StoreEntitySet="Utilisateur">
+          <ScalarProperty Name="IdUtilisateur" ColumnName="IdUtilisateur" />
+          <ScalarProperty Name="Civilite" ColumnName="Civilite" />
+          <ScalarProperty Name="Prenom" ColumnName="Prenom" />
+          <ScalarProperty Name="Nom" ColumnName="Nom" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Telephone" ColumnName="Telephone" />
+          <ScalarProperty Name="MotDePasse" ColumnName="MotDePasse" />
+          <ScalarProperty Name="Vendeur" ColumnName="Vendeur" />
+          <ScalarProperty Name="Bloque" ColumnName="Bloque" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <AssociationSetMapping Name="Cadre_Finition" TypeName="KartinaProjetModel.Cadre_Finition" StoreEntitySet="Cadre-Finition">
+      <EndProperty Name="Cadre">
+        <ScalarProperty Name="IdCadre" ColumnName="IdCadre" />
+      </EndProperty>
+      <EndProperty Name="Finition">
+        <ScalarProperty Name="IdFinition" ColumnName="IdFinition" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="Cadre_Taille" TypeName="KartinaProjetModel.Cadre_Taille" StoreEntitySet="Cadre-Taille">
+      <EndProperty Name="Cadre">
+        <ScalarProperty Name="IdCadre" ColumnName="IdCadre" />
+      </EndProperty>
+      <EndProperty Name="Taille">
+        <ScalarProperty Name="IdTaille" ColumnName="IdTaille" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="Format_Finition" TypeName="KartinaProjetModel.Format_Finition" StoreEntitySet="Format-Finition">
+      <EndProperty Name="Finition">
+        <ScalarProperty Name="IdFinition" ColumnName="IdFinition" />
+      </EndProperty>
+      <EndProperty Name="Format">
+        <ScalarProperty Name="IdFormat" ColumnName="IdFormat" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="Format_Taille" TypeName="KartinaProjetModel.Format_Taille" StoreEntitySet="Format-Taille">
+      <EndProperty Name="Format">
+        <ScalarProperty Name="IdFormat" ColumnName="IdFormat" />
+      </EndProperty>
+      <EndProperty Name="Taille">
+        <ScalarProperty Name="IdTaille" ColumnName="IdTaille" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="Photo_Format" TypeName="KartinaProjetModel.Photo_Format" StoreEntitySet="Photo-Format">
+      <EndProperty Name="Format">
+        <ScalarProperty Name="IdFormat" ColumnName="IdFormat" />
+      </EndProperty>
+      <EndProperty Name="Photo">
+        <ScalarProperty Name="IdPhoto" ColumnName="IdPhoto" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="Photo_Tag" TypeName="KartinaProjetModel.Photo_Tag" StoreEntitySet="Photo-Tag">
+      <EndProperty Name="Photo">
+        <ScalarProperty Name="IdPhoto" ColumnName="IdPhoto" />
+      </EndProperty>
+      <EndProperty Name="Tag">
+        <ScalarProperty Name="IdTag" ColumnName="IdTag" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="Photo_Theme" TypeName="KartinaProjetModel.Photo_Theme" StoreEntitySet="Photo-Theme">
+      <EndProperty Name="Photo">
+        <ScalarProperty Name="IdPhoto" ColumnName="IdPhoto" />
+      </EndProperty>
+      <EndProperty Name="Theme">
+        <ScalarProperty Name="IdTheme" ColumnName="IdTheme" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="Utilisateur_Adresse" TypeName="KartinaProjetModel.Utilisateur_Adresse" StoreEntitySet="Utilisateur-Adresse">
+      <EndProperty Name="Adresse">
+        <ScalarProperty Name="IdAdresse" ColumnName="IdAdresse" />
+      </EndProperty>
+      <EndProperty Name="Utilisateur">
+        <ScalarProperty Name="IdUtilisateur" ColumnName="IdUtilisateur" />
+      </EndProperty>
+    </AssociationSetMapping>
+  </EntityContainerMapping>
+</Mapping>
