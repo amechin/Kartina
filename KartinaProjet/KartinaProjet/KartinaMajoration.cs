@@ -15,6 +15,6 @@ namespace KartinaProjet
     public partial class KartinaMajoration
     {
         public int IdMajoration { get; set; }
-        public int coeff { get; set; }
+        public Nullable<int> coeff { get; set; }
     }
 }

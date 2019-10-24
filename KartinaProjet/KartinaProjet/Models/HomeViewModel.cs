@@ -9,7 +9,7 @@ namespace KartinaProjet.Models
     {
         public List<Photo> ListTopPhoto { get; set; }
         public List<Theme> ListTheme { get; set; }
-
+        public KartinaMajoration KartinaMaj { get; set; }
         public HomeViewModel()
         {
             ListTopPhoto = new List<Photo>();

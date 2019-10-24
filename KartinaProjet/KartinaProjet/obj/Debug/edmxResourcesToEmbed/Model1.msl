@@ -163,6 +163,9 @@
     <EntitySetMapping Name="Theme">
       <EntityTypeMapping TypeName="KartinaProjetModel.Theme">
         <MappingFragment StoreEntitySet="Theme">
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="UrlImage" ColumnName="UrlImage" />
+          <ScalarProperty Name="Slogan" ColumnName="Slogan" />
           <ScalarProperty Name="IdTheme" ColumnName="IdTheme" />
           <ScalarProperty Name="Libelle" ColumnName="Libelle" />
         </MappingFragment>

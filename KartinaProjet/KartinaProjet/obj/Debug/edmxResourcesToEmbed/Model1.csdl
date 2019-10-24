@@ -100,7 +100,7 @@
       <PropertyRef Name="IdMajoration" />
     </Key>
     <Property Name="IdMajoration" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="coeff" Type="Int32" Nullable="false" />
+    <Property Name="coeff" Type="Int32" />
   </EntityType>
   <EntityType Name="NbrTirageMax">
     <Key>
@@ -176,6 +176,9 @@
     <Property Name="IdTheme" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="Libelle" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
     <NavigationProperty Name="Photo" Relationship="Self.Photo_Theme" FromRole="Theme" ToRole="Photo" />
+    <Property Name="Slogan" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="UrlImage" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Description" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
   </EntityType>
   <EntityType Name="Utilisateur">
     <Key>

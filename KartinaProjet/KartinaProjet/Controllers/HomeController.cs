@@ -23,11 +23,20 @@ namespace KartinaProjet.Controllers
             Random rand = new Random();
             int toSkip = rand.Next(1, db.Theme.Count());
             //Récupération des 4 thèmes de manière aléatoire
+            //vm.ListTheme = db.Theme
+            //                .OrderBy(r => Guid.NewGuid())
+            //                .Skip(toSkip).Take(4)
+            //                .ToList();
             vm.ListTheme = db.Theme
-                            .OrderBy(r => Guid.NewGuid())
-                            .Skip(toSkip).Take(4)
-                            .ToList();
-       
+                           .Take(4)
+                           .ToList();
+
+            //vm.KartinaMaj = db.KartinaMajoration
+            //                        .Where(x => x.IdMajoration == 1)
+            //                        .ToList()
+            //                        .FirstOrDefault();
+
+
             return View(vm);
         }
     }

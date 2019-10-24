@@ -14,16 +14,16 @@
             <div class="carousel-inner">
                 <div class="carousel-item active">
                     <img src="~/Images/Carousel1.png" class="d-block w-100" alt="...">
-                    <div class="carousel-caption d-none d-md-block">
-                        <h5>First slide label</h5>
-                        <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+                    <div class="carousel-caption d-none d-md-block w-25">
+                        <p class="h1 text-left font-weight-bold text-uppercase">Artistes primés à l'honneur</p>
+                        <p class="font-weight-light text-left h6">Découvrez notre sélection d'artistes primés</p>
                     </div>
                 </div>
                 <div class="carousel-item">
                     <img src="~/Images/Carousel2.png" class="d-block w-100" alt="...">
-                    <div class="carousel-caption d-none d-md-block">
-                        <h5>Second slide label</h5>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    <div class="carousel-caption d-none d-md-block w-25">
+                        <p class="h1 text-left font-weight-bold text-uppercase">I'm not a trophy</p>
+                        <p class="font-weight-light text-left h6">Nouvelle collection : l'art au service de la cause animale</p>
                     </div>
                 </div>
                 <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
@@ -50,127 +50,50 @@
     <div class="row font-weight-bold">
         <h5 class="font-weight-light d-flex align-items-center flex-wrap mb-3">
             Œuvres en édition limitée
-            et numérotée avec certificat d'authenticité</h5>
+            et numérotée avec certificat d'authenticité
+        </h5>
     </div>
 </div>
 
 <div class="container-fluid">
     <div class="row mt-4 px-4">
-        @foreach (var photo in Model.ListTopPhoto )
+        @foreach (var photo in Model.ListTopPhoto)
         {
-            <div class="col-sm-6 col-md-4 px-4 d-flex justify-content-center">
+            <div class="col-12 col-sm-6 col-md-4 px-4 mb-4 d-flex justify-content-center">
                 <div class="card border-0">
                     <img src="@photo.LienURL" class="card-img-top carte" alt="@photo.NomPh">
                     <div class="card-body px-0 py-2">
                         <div class="d-flex justify-content-between">
-                            <h5 class="card-title mb-0 align-middle">Damien Dufresne, Lin Long 2</h5>
+
+                            @if (!string.IsNullOrEmpty(photo.Artiste.Pseudonyme))
+                            {
+                                <h5 class="card-title mb-0 align-middle">
+                                    @(photo.Artiste.Pseudonyme + ", " + photo.NomPh)
+                                </h5>
+                            }
+                            else
+                            {
+                                <h5 class="card-title mb-0 align-middle">
+                                    @(photo.Artiste.Prenom + " " + photo.Artiste.Nom + ", " + photo.NomPh)
+                                </h5>
+                            }
                             <h5 class="card-title font-weight-light mb-1"><small>à partir de</small></h5>
                         </div>
                         <div class="d-flex justify-content-between pt-0">
                             <h6 class="card-title font-weight-light align-items-center mb-0">
                                 Edition Limitée
                             </h6>
-                            <h5 class="card-title font-weight-light">89<small>,00€</small></h5>
+                            @*<h5 class="card-title font-weight-light">@(photo.PrixMini * Model.KartinaMaj.coeff)</h5>*@
                         </div>
                     </div>
                 </div>
             </div>
         }
-
-        <div class="col-sm-6 col-md-4 px-4 d-flex justify-content-center">
-            <div class="card border-0">
-                <img src="~/Images/img1.jpg" class="card-img-top carte" alt="...">
-                <div class="card-body px-0 py-2">
-                    <div class="d-flex justify-content-between">
-                        <h5 class="card-title mb-0 align-middle">Damien Dufresne, Lin Long 2</h5>
-                        <h5 class="card-title font-weight-light mb-1"><small>à partir de</small></h5>
-                    </div>
-                    <div class="d-flex justify-content-between pt-0">
-                        <h6 class="card-title font-weight-light align-items-center mb-0">
-                            Edition Limitée
-                        </h6>
-                        <h5 class="card-title font-weight-light">89<small>,00€</small></h5>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="col-sm-6 col-md-4 px-4 d-flex justify-content-center">
-            <div class="card border-0 carte">
-                <img src="~/Images/img1.jpg" class="card-img-top" alt="...">
-                <div class="card-body px-0 py-2">
-                    <div class="d-flex justify-content-between">
-                        <h5 class="card-title mb-0 align-middle">Damien Dufresne, Lin Long 2</h5>
-                        <h5 class="card-title font-weight-light mb-1"><small>à partir de</small></h5>
-                    </div>
-                    <div class="d-flex justify-content-between pt-0">
-                        <h6 class="card-title font-weight-light align-items-center mb-0">
-                            Edition Limitée
-                        </h6>
-                        <h5 class="card-title font-weight-light">89<small>,00€</small></h5>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="col-sm-6 col-md-4 px-4 d-flex justify-content-center">
-            <div class="card border-0">
-                <img src="~/Images/img1.jpg" class="card-img-top" alt="...">
-                <div class="card-body px-0 py-2">
-                    <div class="d-flex justify-content-between">
-                        <h5 class="card-title mb-0 align-middle">Damien Dufresne, Lin Long 2</h5>
-                        <h5 class="card-title font-weight-light mb-1"><small>à partir de</small></h5>
-                    </div>
-                    <div class="d-flex justify-content-between pt-0">
-                        <h6 class="card-title font-weight-light align-items-center mb-0">
-                            Edition Limitée
-                        </h6>
-                        <h5 class="card-title font-weight-light">89<small>,00€</small></h5>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="col-sm-6 col-md-4 px-4 d-flex justify-content-center">
-            <div class="card border-0">
-                <img src="~/Images/img1.jpg" class="card-img-top" alt="...">
-                <div class="card-body px-0 py-2">
-                    <div class="d-flex justify-content-between">
-                        <h5 class="card-title mb-0 align-middle">Damien Dufresne, Lin Long 2</h5>
-                        <h5 class="card-title font-weight-light mb-1"><small>à partir de</small></h5>
-                    </div>
-                    <div class="d-flex justify-content-between pt-0">
-                        <h6 class="card-title font-weight-light align-items-center mb-0">
-                            Edition Limitée
-                        </h6>
-                        <h5 class="card-title font-weight-light">89<small>,00€</small></h5>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="col-sm-6 col-md-4 px-4 d-flex justify-content-center">
-            <div class="card border-0">
-                <img src="~/Images/img1.jpg" class="card-img-top" alt="...">
-                <div class="card-body px-0 py-2">
-                    <div class="d-flex justify-content-between">
-                        <h5 class="card-title mb-0 align-middle">Damien Dufresne, Lin Long 2</h5>
-                        <h5 class="card-title font-weight-light mb-1"><small>à partir de</small></h5>
-                    </div>
-                    <div class="d-flex justify-content-between pt-0">
-                        <h6 class="card-title font-weight-light align-items-center mb-0">
-                            Edition Limitée
-                        </h6>
-                        <h5 class="card-title font-weight-light">89<small>,00€</small></h5>
-                    </div>
-                </div>
-            </div>
-        </div>
     </div>
 
     <!--Bouton explorer la collection-->
     <div class="row mt-4 px-4 d-flex justify-content-center">
-        <div class="col-sm-8 col-md-4 col-lg-4">
+        <div class="col-10 col-sm-8 col-md-4">
             <button type="button" class="btn btn-outline-dark btn-block font-weight-light">
                 Explorer la
                 collection
@@ -187,86 +110,31 @@
     <div class="row font-weight-bold mx-5">
         <h5 class="font-weight-light d-flex align-items-center text-black-50 flex-wrap mb-3">
             Nous avons sélectionné pour
-            vous les thèmes les plus populaires</h5>
+            vous les thèmes les plus populaires
+        </h5>
     </div>
 </div>
 <div class="row">
-    <div class="col-sm-12 col-md-6 p-0">
-        <div class="card bg-white text-white">
-            <img src="~/Images/img1.jpg" class="card-img-top border" alt="Image1">
-            <div class="card-img-overlay d-flex justify-content-end align-items-center flex-column">
-                <p class="card-title display-4 bg-white text-dark font-weight-lighter w-100 text-center mb-0 pb-1">Voyages</p>
-                <p class="card-text h4 text-black-50 font-weight-bolder bg-white w-100 text-center pb-2 shadow-sm">
-                    Vivez vos
-                    rêves
-                </p>
-                <div class="w-100 d-flex justify-content-center">
-                    <button type="button" class="btn btn-light btn-sm shadow-sm font-weight-light">
-                        Parcourir la
-                        collection
-                    </button>
+    @foreach (var theme in Model.ListTheme)
+    {
+        <div class="col-sm-12 col-md-6 p-0">
+            <div class="card bg-white text-white">
+                <img src="@theme.UrlImage" class="card-img-top border-white theme-img" alt="Image1">
+                <div class="card-img-overlay d-flex justify-content-end align-items-center flex-column px-0">
+                    <p class="card-title display-4 bg-white text-dark font-weight-lighter w-100 text-center mb-0 pb-1">@theme.Libelle</p>
+                    <p class="card-text h4 text-black-50 font-weight-light bg-white w-100 text-center pb-2 shadow-sm">
+                       @theme.Slogan
+                    </p>
+                    <div class="w-100 d-flex justify-content-center">
+                        <button type="button" class="btn btn-outline-light shadow-sm font-weight-normal">
+                            Parcourir la
+                            collection
+                        </button>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-    <div class="col-sm-12 col-md-6 p-0">
-        <div class="card bg-white text-white">
-            <img src="~/Images/img1.jpg" class="card-img-top border" alt="Image1">
-            <div class="card-img-overlay d-flex justify-content-end align-items-center flex-column">
-                <p class="card-title display-4 bg-white text-dark font-weight-lighter w-100 text-center mb-0 pb-1">Voyages</p>
-                <p class="card-text h4 text-black-50 font-weight-bolder bg-white w-100 text-center pb-2 shadow-sm">
-                    Vivez vos
-                    rêves
-                </p>
-                <div class="w-100 d-flex justify-content-center">
-                    <button type="button" class="btn btn-light btn-sm shadow-sm font-weight-light">
-                        Parcourir la
-                        collection
-                    </button>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="col-sm-12 col-md-6 p-0">
-        <div class="card bg-white text-white">
-            <img src="~/Images/img1.jpg" class="card-img-top border" alt="Image1">
-            <div class="card-img-overlay d-flex justify-content-end align-items-center flex-column">
-                <p class="card-title display-4 bg-white text-dark font-weight-lighter w-100 text-center mb-0 pb-1">Voyages</p>
-                <p class="card-text h4 text-black-50 font-weight-bolder bg-white w-100 text-center pb-2 shadow-sm">
-                    Vivez
-                    vos rêves
-                </p>
-                <div class="w-100 d-flex justify-content-center">
-                    <button type="button" class="btn btn-light btn-sm shadow-sm font-weight-light">
-                        Parcourir la
-                        collection
-                    </button>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="col-sm-12 col-md-6 p-0">    
-        <div class="card bg-white text-white">
-            <img src="~/Images/img1.jpg" class="card-img-top border" alt="Image1">
-            <div class="card-img-overlay d-flex justify-content-end align-items-center flex-column">
-                <p class="card-title display-4 bg-white text-dark font-weight-lighter w-100 text-center mb-0 pb-1">
-                    Voyages
-                </p>
-                <p class="card-text h4 text-black-50 font-weight-bolder bg-white w-100 text-center pb-2 shadow-sm">
-                    Vivez
-                    vos rêves
-                </p>
-                <div class="w-100 d-flex justify-content-center">
-                    <button type="button" class="btn btn-light btn-sm shadow-sm font-weight-light">
-                        Parcourir la
-                        collection
-                    </button>
-                </div>
-            </div>
-        </div>
-
-
-    </div>
+    }
 </div>
 <!--Bouton explorer les thèmes-->
 <div class="row mt-5 px-4 d-flex justify-content-center">
