@@ -1,4 +1,5 @@
-﻿function afficher_cacher2(e,d,p) {
+﻿//fonction pour le afficher/cacher la description
+function afficher_cacher2(e, d, p) {
     document.getElementById('bouton_texte').innerHTML = (document.getElementById('bouton_texte').innerHTML == "Masquer le texte") ? "Afficher le texte" : "Masquer le texte";
 
     //text
@@ -35,4 +36,19 @@
         //affichage des points
         elts3[i].style.display = (elts3[i].style.display == "none") ? "block" : "none";
     }
+}
+
+//filtre ListArtist
+function Filtre(lettre) {
+    var ListArtiste = document.getElementById("ListArtist");
+    var TailleTabArtist = ListArtiste.length;
+
+    var regex = 'lettre';
+    for (var i = 0; i < TailleTabArtist; i++) {
+        
+    }
+    
+    alert("cc");
+    alert(lettre);
+     
 }
