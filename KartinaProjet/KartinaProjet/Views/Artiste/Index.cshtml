@@ -78,7 +78,9 @@
                 {
                     <h6>
                         <a href="" class="text-dark">
-                            @artiste.Nom  @artiste.Prenom
+                            @artiste.Nom
+                            <br/>
+                            @artiste.Prenom
                         </a>
                     </h6>
                 }
@@ -91,7 +93,6 @@
                         </p>
                     </div>
                 </div>
-                @*<button type="button" class="" onclick="@Html.ActionLink("Aller sur la page de l'auteur", "Details", "Artiste", new { id = artiste.IdArtiste }, null)"></button>*@
                 <button type="button" class="btn btn-outline-secondary">    
                     @Html.ActionLink("Aller sur la page de l'auteur", "Details", "Artiste", new { id = artiste.IdArtiste }, null)
                 </button>

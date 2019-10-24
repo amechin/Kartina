@@ -30,12 +30,15 @@ textarea {
 }
 
 
-.DivPresentation
-{
+
+
+.DivPresentation {
+
     height: 220px;
 }
 
 .Presentation {
+
     overflow: hidden;
     overflow-wrap: break-word;
     text-transform: none;
@@ -61,13 +64,22 @@ textarea {
 
 /*Deuxieme version pour afficher les ...*/
 .DivPresentationArtiste {
+    
     height: 100px;
+    
     overflow: hidden;
     display: -webkit-box;
     -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
 }
 .PresentationListArtiste {
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.NomTitre {
+    max-width: 200px;
+    
     overflow: hidden;
     text-overflow: ellipsis;
 }

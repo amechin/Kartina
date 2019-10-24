@@ -2,9 +2,11 @@
     document.getElementById('bouton_texte').innerHTML = (document.getElementById('bouton_texte').innerHTML == "Masquer le texte") ? "Afficher le texte" : "Masquer le texte";
 
     //text
+    //presentation
     var elts = document.getElementsByClassName(e);
 
     //div
+    //divPresentation
     var elts2 = document.getElementsByClassName(d);
 
     //points
