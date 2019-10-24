@@ -86,3 +86,4 @@
 \\Mac\Home\Documents\2. Programmation AJC C sharp\Projet YellowKorner\KartinaRepo\KartinaProjet\KartinaProjet\bin\EntityFramework.xml
 \\Mac\Home\Documents\2. Programmation AJC C sharp\Projet YellowKorner\KartinaRepo\KartinaProjet\KartinaProjet\bin\EntityFramework.SqlServer.xml
 \\Mac\Home\Documents\2. Programmation AJC C sharp\Projet YellowKorner\KartinaRepo\KartinaProjet\KartinaProjet\bin\fr\EntityFramework.resources.dll
+\\Mac\Home\Documents\2. Programmation AJC C sharp\Projet YellowKorner\KartinaRepo\KartinaProjet\KartinaProjet\bin\fr\EntityFramework.SqlServer.resources.dll
