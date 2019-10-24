@@ -29,13 +29,45 @@ textarea {
     background-color:black;
 }
 
-/*#DivPresentation
+
+.DivPresentation
 {
-    height: auto;
+    height: 220px;
 }
-#Presentation {
-    text-transform: none;
-    text-overflow: ellipsis;
+
+.Presentation {
     overflow: hidden;
-    white-space: nowrap;
-}*/
+    overflow-wrap: break-word;
+    text-transform: none;
+    height: 100px;
+}
+.points{
+    display: block;
+}
+.photo {
+    width: 100%;
+    object-fit: cover;
+    
+}
+.redimension
+{
+    overflow:hidden;
+    height: 300px;
+}
+.DescriptionArtiste
+{
+    background-color: whitesmoke;
+}
+
+/*Deuxieme version pour afficher les ...*/
+.DivPresentationArtiste {
+    height: 100px;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+}
+.PresentationListArtiste {
+    overflow: hidden;
+    text-overflow: ellipsis;
+}

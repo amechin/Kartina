@@ -18,7 +18,25 @@ namespace KartinaProjet.Controllers
         // GET: Artiste
         public ActionResult Index()
         {
-            return View(db.Artiste.ToList());
+            var vm = new ListArtistViewModel();
+
+            //List Artiste
+            var query = from artist in db.Artiste
+                        select artist;
+
+            vm.ListArtist = query
+                            .ToList();
+
+            //List Photo
+            var query2 = from Photo in db.Photo
+                         select Photo;
+
+            vm.FiltredPhoto = query2
+                                .OrderBy(x => x.IdArtiste)
+                                .ToList();
+
+           
+            return View(vm);
         }
 
 

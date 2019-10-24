@@ -1,39 +1,104 @@
-﻿
+﻿@model KartinaProjet.Models.ListArtistViewModel
+
 @{
     ViewBag.Title = "Index";
 }
-<div class="containee">
-    <h1 class="d-flex justify-content-center">Tous Les Artistes</h1>
 
-    <!-- Bouttons Filtres Lettres-->
-    <div class="row mt-3 py-1" id="FiltreLettre">
-        <button type="button" class="btn btn-outline-light col-2 col-md-auto mx-1">A</button>
-        <button type="button" class="btn btn-outline-light col-2 col-md-auto mx-1">B</button>
-        <button type="button" class="btn btn-outline-light col-2 col-md-auto mx-1">C</button>
-        <button type="button" class="btn btn-outline-light col-2 col-md-auto mx-1">D</button>
-        <button type="button" class="btn btn-outline-light col-2 col-md-auto mx-1">E</button>
-        <button type="button" class="btn btn-outline-light col-2 col-md-auto mx-1">F</button>
-        <button type="button" class="btn btn-outline-light col-2 col-md-auto mx-1">G</button>
-        <button type="button" class="btn btn-outline-light col-2 col-md-auto mx-1">H</button>
-        <button type="button" class="btn btn-outline-light col-2 col-md-auto mx-1">I</button>
-        <button type="button" class="btn btn-outline-light col-2 col-md-auto mx-1">J</button>
-        <button type="button" class="btn btn-outline-light col-2 col-md-auto mx-1">K</button>
-        <button type="button" class="btn btn-outline-light col-2 col-md-auto mx-1">L</button>
-        <button type="button" class="btn btn-outline-light col-2 col-md-auto mx-1">M</button>
-        <button type="button" class="btn btn-outline-light col-2 col-md-auto mx-1">N</button>
-        <button type="button" class="btn btn-outline-light col-2 col-md-auto mx-1">O</button>
-        <button type="button" class="btn btn-outline-light col-2 col-md-auto mx-1">P</button>
-        <button type="button" class="btn btn-outline-light col-2 col-md-auto mx-1">Q</button>
-        <button type="button" class="btn btn-outline-light col-2 col-md-auto mx-1">R</button>
-        <button type="button" class="btn btn-outline-light col-2 col-md-auto mx-1">S</button>
-        <button type="button" class="btn btn-outline-light col-2 col-md-auto mx-1">T</button>
-        <button type="button" class="btn btn-outline-light col-2 col-md-auto mx-1">U</button>
-        <button type="button" class="btn btn-outline-light col-2 col-md-auto mx-1">V</button>
-        <button type="button" class="btn btn-outline-light col-2 col-md-auto mx-1">W</button>
-        <button type="button" class="btn btn-outline-light col-2 col-md-auto mx-1">X</button>
-        <button type="button" class="btn btn-outline-light col-2 col-md-auto mx-1">Y</button>
-        <button type="button" class="btn btn-outline-light col-2 col-md-auto mx-1">Z</button>
+    <div class="container-fluid m-0 p-0">
+        <h1 class="d-flex justify-content-center">Tous Les Artistes</h1>
+
+        <!-- Bouttons Filtres Lettres-->
+        <div class="row mt-3 py-1" id="FiltreLettre">
+            <button type="button" class="btn btn-outline-light col-2 col-md-auto mx-1">A</button>
+            <button type="button" class="btn btn-outline-light col-2 col-md-auto mx-1">B</button>
+            <button type="button" class="btn btn-outline-light col-2 col-md-auto mx-1">C</button>
+            <button type="button" class="btn btn-outline-light col-2 col-md-auto mx-1">D</button>
+            <button type="button" class="btn btn-outline-light col-2 col-md-auto mx-1">E</button>
+            <button type="button" class="btn btn-outline-light col-2 col-md-auto mx-1">F</button>
+            <button type="button" class="btn btn-outline-light col-2 col-md-auto mx-1">G</button>
+            <button type="button" class="btn btn-outline-light col-2 col-md-auto mx-1">H</button>
+            <button type="button" class="btn btn-outline-light col-2 col-md-auto mx-1">I</button>
+            <button type="button" class="btn btn-outline-light col-2 col-md-auto mx-1">J</button>
+            <button type="button" class="btn btn-outline-light col-2 col-md-auto mx-1">K</button>
+            <button type="button" class="btn btn-outline-light col-2 col-md-auto mx-1">L</button>
+            <button type="button" class="btn btn-outline-light col-2 col-md-auto mx-1">M</button>
+            <button type="button" class="btn btn-outline-light col-2 col-md-auto mx-1">N</button>
+            <button type="button" class="btn btn-outline-light col-2 col-md-auto mx-1">O</button>
+            <button type="button" class="btn btn-outline-light col-2 col-md-auto mx-1">P</button>
+            <button type="button" class="btn btn-outline-light col-2 col-md-auto mx-1">Q</button>
+            <button type="button" class="btn btn-outline-light col-2 col-md-auto mx-1">R</button>
+            <button type="button" class="btn btn-outline-light col-2 col-md-auto mx-1">S</button>
+            <button type="button" class="btn btn-outline-light col-2 col-md-auto mx-1">T</button>
+            <button type="button" class="btn btn-outline-light col-2 col-md-auto mx-1">U</button>
+            <button type="button" class="btn btn-outline-light col-2 col-md-auto mx-1">V</button>
+            <button type="button" class="btn btn-outline-light col-2 col-md-auto mx-1">W</button>
+            <button type="button" class="btn btn-outline-light col-2 col-md-auto mx-1">X</button>
+            <button type="button" class="btn btn-outline-light col-2 col-md-auto mx-1">Y</button>
+            <button type="button" class="btn btn-outline-light col-2 col-md-auto mx-1">Z</button>
+        </div>
+
     </div>
+<div class="container-fluid">
+        <div class="row">
+
+        @foreach (var artiste in @Model.ListArtist)
+        {
+            int id = artiste.IdArtiste;
+            bool exist = false;
+            <div class="col-12 col-sm-12 col-md-6 col-lg-4">
+                @foreach(var photo in @Model.FiltredPhoto)
+                {
+                    if (id == photo.IdArtiste)
+                    {
+                        if(exist == false)
+                        {
+                            <div class="redimension">
+                                <img src="@photo.LienURL" class="photo mt-5"/>
+                            </div>
+
+                            exist = true;
+                        }
+                    }
+                    else
+                    {
+                        exist = false;
+                    }
+                }
+            <div class="DescriptionArtiste">
+                @if (artiste.Pseudonyme != null)
+                {
+
+                    <h6>
+                        <a href="" class="text-dark">
+                            @artiste.Pseudonyme
+                        </a>
+                    </h6>
+                }
+                else
+                {
+                    <h6>
+                        <a href="" class="text-dark">
+                            @artiste.Nom  @artiste.Prenom
+                        </a>
+                    </h6>
+                }
+                <div class="DivPresentationArtiste">
+                    <div class="PresentationListArtiste">
+                        <p>
+
+                            @artiste.Presentation
+
+                        </p>
+                    </div>
+                </div>
+                @*<button type="button" class="" onclick="@Html.ActionLink("Aller sur la page de l'auteur", "Details", "Artiste", new { id = artiste.IdArtiste }, null)"></button>*@
+                <button type="button" class="btn btn-outline-secondary">    
+                    @Html.ActionLink("Aller sur la page de l'auteur", "Details", "Artiste", new { id = artiste.IdArtiste }, null)
+                </button>
+            </div>
+            </div>
+        }
 </div>
+ </div>
 
 
