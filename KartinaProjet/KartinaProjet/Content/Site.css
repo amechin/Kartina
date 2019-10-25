@@ -23,6 +23,7 @@ textarea {
     max-width: 280px;
 }
 
+<<<<<<< HEAD
 
 #FiltreLettre
 {
@@ -83,3 +84,8 @@ textarea {
     overflow: hidden;
     text-overflow: ellipsis;
 }
+=======
+.theme-img {
+    max-height: 500px !important;
+}
+>>>>>>> 70b3d106b9b31c8f2087d29f05253eea7d38fd06

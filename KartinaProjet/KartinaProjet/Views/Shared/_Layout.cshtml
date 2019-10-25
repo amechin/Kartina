@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ﻿<!DOCTYPE html>
 <html>
 <head>
@@ -49,3 +50,237 @@
     @RenderSection("scripts", required: false)
 </body>
 </html>
+=======
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body class="p-0">
+    <div class="container-fluid px-0">
+        <div class="row d-flex justify-content-center bg-danger text-white px-0 py-2">
+            <small class="font-weight-normal align-middle">LIVRAISON GRATUITE EN GALERIE | RETOURS & ÉCHANGES GRATUITS</small>
+        </div>
+        <div class="row d-flex justify-content-between bg-white text-white pt-1 pb-0 mx-2 align-middle">
+            <!--logo-->
+            <img src="https://www.yellowkorner.com/on/demandware.static/Sites-YKF-Site/-/default/dw73af9abc/images/logo.svg"
+                 width="220" height="50" alt="logo">
+            <!--champ recherche-->
+            <form class="form-inline my-2 my-lg-0">
+                <div class="input-group input-group-sm">
+                    <input class="form-control mr-4" type="search" placeholder="Recherche" aria-label="Reacherche">
+                </div>
+            </form>
+            <!--login-->
+            <p class="text-dark font-weight-light d-flex align-items-center h6 mb-0">Utilisateur connecté</p>
+            <!--<p class="text-dark font-weight-light d-flex align-items-center h6 mb-0">Connection</p>-->
+        </div>
+
+        <div class="row pt-0">
+            <nav class="navbar navbar-white navbar-expand-md h5 font-weight-light my-0 pt-0">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item mr-2">
+                            <a class="nav-link text-dark" href="#">Photographies</a>
+                        </li>
+                        <li class="nav-item mr-2">
+                            <a class="nav-link text-dark" href="#">Nouveautés</a>
+                        </li>
+                        <li class="nav-item mr-2">
+                            <a class="nav-link text-dark" href="#">Artistes</a>
+                        </li>
+                        <li class="nav-item mr-2">
+                            <a class="nav-link text-dark" href="#">Derniers exemplaires</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+
+        <!--fil d'arianne-->
+        <nav aria-label="breadcrumb" class="border-top border-secondary">
+            <ol class="breadcrumb bg-white pt-2 mb-0 font-weight-light">
+                <li class="breadcrumb-item pl-2"><a href="#" class="text-dark">Home</a></li>
+                <li class="breadcrumb-item"><a href="#" class="text-dark">Library</a></li>
+                <li class="breadcrumb-item" aria-current="page">Data</li>
+            </ol>
+        </nav>
+
+        @*<div class="navbar navbar-inverse navbar-fixed-top">
+                <div class="container">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        @Html.ActionLink("Nom d'application", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                    </div>
+                    <div class="navbar-collapse collapse">
+                        <ul class="nav navbar-nav">
+                            <li>@Html.ActionLink("Accueil", "Index", "Home")</li>
+                            <li>@Html.ActionLink("À propos de", "About", "Home")</li>
+                            <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>*@
+
+
+        @RenderBody()
+
+    </div>
+    <div class="container-fluid bg-white mt-5 pt-5 pr-0 border-top">
+        <div class="row">
+            <div class="col-5">
+                <div class="row">
+                    <h4 class="font-weight-normal mx-5 mb-3">Photographies</h4>
+                </div>
+                <div class="row">
+                    <div class="col-6 pl-5">
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item border-0 py-2 px-0">
+                                <a class="text-black-50 font-weight-light h5" href="#">Mode</a>
+                            </li>
+                            <li class="list-group-item border-0 px-0 py-2">
+                                <a class="text-black-50 font-weight-light h5" href="#">Nature</a>
+                            </li>
+                            <li class="list-group-item border-0 px-0 py-2">
+                                <a class="text-black-50 font-weight-light h5" href="#">Urban</a>
+                            </li>
+                            <li class="list-group-item border-0 px-0 py-2">
+                                <a class="text-black-50 font-weight-light h5" href="#">Voyage</a>
+                            </li>
+                            <li class="list-group-item border-0 px-0 py-2">
+                                <a class="text-black-50 font-weight-light h5" href="#">Rêve & Création</a>
+                            </li>
+                            <li class="list-group-item border-0 px-0 py-2">
+                                <a class="text-black-50 font-weight-light h5" href="#">Sport & Technique</a>
+                            </li>
+                            <li class="list-group-item border-0 px-0 py-2">
+                                <a class="text-black-50 font-weight-light h5" href="#">Célébrité et Histoire</a>
+                            </li>
+                            <li class="list-group-item border-0 px-0 py-2">
+                                <a class="text-black-50 font-weight-light h5" href="#">Paysage</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-6 px-5">
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item border-0 px-0 py-2">
+                                <a class="text-black-50 font-weight-light h5" href="#">Coups de coeur</a>
+                            </li>
+                            <li class="list-group-item border-0 px-0 py-2">
+                                <a class="text-black-50 font-weight-light h5" href="#">Nouveautés</a>
+                            </li>
+                            <li class="list-group-item border-0 px-0 py-2">
+                                <a class="text-black-50 font-weight-light h5" href="#">Meilleures ventes</a>
+                            </li>
+                            <li class="list-group-item border-0 px-0 py-2">
+                                <a class="text-black-50 font-weight-light h5" href="#">Derniers tirages disponibles</a>
+                            </li>
+                            <li class="list-group-item border-0 px-0 py-2">
+                                <a class="text-black-50 font-weight-light h5" href="#">Noir & blanc</a>
+                            </li>
+                            <li class="list-group-item border-0 px-0 py-2">
+                                <a class="text-black-50 font-weight-light h5" href="#">Inspirations</a>
+                            </li>
+                            <li class="list-group-item border-0 px-0 py-2">
+                                <a class="text-black-50 font-weight-light h5" href="#">Célébrité et Histoire</a>
+                            </li>
+                            <li class="list-group-item border-0 px-0 py-2">
+                                <a class="text-black-50 font-weight-light h5" href="#">Paysage</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-2">
+                <div class="row text-left">
+                    <p class="font-weight-normal mb-3 h4">A propos</p>
+                </div>
+                <div class="row">
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item border-0 px-0 py-2">
+                            <a class="text-black-50 font-weight-light h5" href="#">Notre savoir-faire</a>
+                        </li>
+                        <li class="list-group-item border-0 px-0 py-2">
+                            <a class="text-black-50 font-weight-light h5" href="#">Le laboratoire</a>
+                        </li>
+                        <li class="list-group-item border-0 px-0 py-2">
+                            <a class="text-black-50 font-weight-light h5" href="#">Les galleries</a>
+                        </li>
+                        <li class="list-group-item border-0 px-0 py-2">
+                            <a class="text-black-50 font-weight-light h5" href="#">Devenir franchisé</a>
+                        </li>
+                        <li class="list-group-item border-0 px-0 py-2">
+                            <a class="text-black-50 font-weight-light h5" href="#">Nous rejoindre</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-2">
+                <div class="row text-left">
+                    <p class="font-weight-normal mb-3 h4">Aide et guide</p>
+                </div>
+                <div class="row">
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item border-0 px-0 py-2">
+                            <a class="text-black-50 font-weight-light h5" href="#">Où est ma commande ?</a>
+                        </li>
+                        <li class="list-group-item border-0 px-0 py-2">
+                            <a class="text-black-50 font-weight-light h5" href="#">Livraison et retours</a>
+                        </li>
+                        <li class="list-group-item border-0 px-0 py-2">
+                            <a class="text-black-50 font-weight-light h5" href="#">Guide des formats</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-3">
+                <div class="row text-left">
+                    <p class="font-weight-normal mb-3 h4">Inscrivez-vous à la newsletter</p>
+                </div>
+                <div class="row">
+
+                </div>
+            </div>
+        </div>
+
+
+        <div class="container-fluid border-top mt-3">
+            <div class="row mt-2">
+                <div class="col-md-12">
+                    <div class="copyright-text text-center font-weight-lighter">
+                        <p>
+                            © 2019
+                            <a href="#"></a>. All rights reserved. Created by Us
+                        </p>
+                    </div>
+
+                    <div class="go_top">
+                        <span class="icon-arrow-up"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>
+>>>>>>> 70b3d106b9b31c8f2087d29f05253eea7d38fd06

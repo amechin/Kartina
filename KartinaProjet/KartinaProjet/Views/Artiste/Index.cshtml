@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ﻿@model KartinaProjet.Models.ListArtistViewModel
 
 @{
@@ -95,3 +96,88 @@
     </div>
 
 
+=======
+﻿@model IEnumerable<KartinaProjet.Artiste>
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <p>
+        @Html.ActionLink("Create New", "Create")
+    </p>
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Nom)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Prenom)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Pays)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Presentation)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Facebook)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Pinterest)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.twitter)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Pseudonyme)
+            </th>
+            <th></th>
+        </tr>
+    
+    @foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nom)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Prenom)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Pays)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Presentation)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Facebook)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Pinterest)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.twitter)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Pseudonyme)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id=item.IdArtiste }) |
+                @Html.ActionLink("Details", "Details", new { id=item.IdArtiste }) |
+                @Html.ActionLink("Delete", "Delete", new { id=item.IdArtiste })
+            </td>
+        </tr>
+    }
+    
+    </table>
+</body>
+</html>
+>>>>>>> 70b3d106b9b31c8f2087d29f05253eea7d38fd06

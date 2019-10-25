@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ﻿@model KartinaProjet.Models.ArtisteViewModel
 @{
     ViewBag.Title = "Details";
@@ -183,3 +184,95 @@
 
 </body>
 </html>
+=======
+﻿@model KartinaProjet.Artiste
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Details</title>
+</head>
+<body>
+    <div>
+        <h4>Artiste</h4>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.Nom)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Nom)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.Prenom)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Prenom)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.Pays)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Pays)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.Presentation)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Presentation)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.Facebook)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Facebook)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.Pinterest)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Pinterest)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.twitter)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.twitter)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.Pseudonyme)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Pseudonyme)
+            </dd>
+    
+        </dl>
+    </div>
+    <p>
+        @Html.ActionLink("Edit", "Edit", new { id = Model.IdArtiste }) |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+</body>
+</html>
+>>>>>>> 70b3d106b9b31c8f2087d29f05253eea7d38fd06
