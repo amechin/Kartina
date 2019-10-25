@@ -45,7 +45,6 @@
     <Property Name="Facebook" Type="text" />
     <Property Name="Pinterest" Type="text" />
     <Property Name="twitter" Type="text" />
-    <Property Name="Pseudonyme" Type="varchar" MaxLength="50" />
   </EntityType>
   <EntityType Name="Cadre">
     <Key>
@@ -151,6 +150,7 @@
     <Property Name="DateMiseEnLigne" Type="datetime" Nullable="false" />
     <Property Name="IdOrientation" Type="int" Nullable="false" />
     <Property Name="IdArtiste" Type="int" Nullable="false" />
+    <Property Name="IsActive" Type="bit" Nullable="false" />
   </EntityType>
   <EntityType Name="Photo-Format">
     <Key>
@@ -205,6 +205,8 @@
     </Key>
     <Property Name="IdTheme" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="Libelle" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="UrlImage" Type="varchar(max)" Nullable="false" />
+    <Property Name="Slogan" Type="varchar" MaxLength="100" Nullable="false" />
   </EntityType>
   <EntityType Name="Utilisateur">
     <Key>

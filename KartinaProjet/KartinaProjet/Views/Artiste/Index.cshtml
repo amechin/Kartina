@@ -8,6 +8,7 @@
         <h1 class="d-flex justify-content-center">Tous Les Artistes</h1>
 
         <!-- Bouttons Filtres Lettres-->
+        @*
         <div class="row mt-3 py-1" id="FiltreLettre">
             <button type="button" class="btn btn-outline-light col-2 col-md-auto mx-1" value="A" onclick="Filtre(value);">A</button>
             <button type="button" class="btn btn-outline-light col-2 col-md-auto mx-1" value="B" onclick="Filtre(value);">B</button>
@@ -36,6 +37,7 @@
             <button type="button" class="btn btn-outline-light col-2 col-md-auto mx-1" value="Y" onclick="Filtre(value);">Y</button>
             <button type="button" class="btn btn-outline-light col-2 col-md-auto mx-1" value="Z" onclick="Filtre(value);">Z</button>
         </div>
+        *@
 
     </div>
     <div class="container-fluid">
@@ -65,25 +67,11 @@
                         }
                     }
                     <div class="DescriptionArtiste">
-                        @if (artiste.Pseudonyme != null)
-                        {
-
-                            <h6>
-                                <a href="" class="text-dark">
-                                    @artiste.Pseudonyme
-                                </a>
-                            </h6>
-                        }
-                        else
-                        {
-                            <h6>
-                                <a href="" class="text-dark">
-                                    @artiste.Nom
-                                    
-                                    @artiste.Prenom
-                                </a>
-                            </h6>
-                        }
+                        <h6 class="text-dark">
+                            @artiste.Nom
+                            @artiste.Prenom
+                        </h6>
+                        
                         <div class="DivPresentationArtiste">
                             <div class="PresentationListArtiste">
                                 <p>

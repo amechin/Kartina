@@ -25,6 +25,7 @@ namespace KartinaProjet.Controllers
                         select artist;
 
             vm.ListArtist = query
+                            .OrderBy(x=>x.Nom)
                             .ToList();
 
             //List Photo

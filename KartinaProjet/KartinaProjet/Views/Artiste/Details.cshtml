@@ -18,16 +18,7 @@
             <div class="d-flex justify-content-start offset-lg-1">
                 @foreach (var item in Model.FiltredArtist)
                 {
-
-                    if (item.Pseudonyme != null)
-                    {
-                        <h1>@item.Pseudonyme</h1>
-                    }
-                    else
-                    {
                         <h1>@item.Nom  @item.Prenom</h1>
-
-                    }
 
 
                 }
@@ -69,14 +60,9 @@
                                             <!--Nom de l'artiste-->
                                             @foreach (var artiste in Model.FiltredArtist)
                                             {
-                                                if (artiste.Pseudonyme != null)
-                                                {
-                                                    <a href="Artiste.html" class="text-dark"> @artiste.Pseudonyme</a>
-                                                }
-                                                else
-                                                {
-                                                    <a href="Artiste.html" class="text-dark">@artiste.Nom  @artiste.Prenom</a>
-                                                }
+                                                
+                                                    <a href="@artiste.IdArtiste" class="text-dark">@artiste.Nom  @artiste.Prenom</a>
+                                                
                                                 <br />
                                                 <!--Titre de L'image-->
                                                 <span>
@@ -158,14 +144,9 @@
 
                                             @foreach (var artiste in Model.FiltredArtist)
                                             {
-                                                if (artiste.Pseudonyme != null)
-                                                {
-                                                    <a href="Artiste.html" class="text-dark">@artiste.Pseudonyme </a>
-                                                }
-                                                else
-                                                {
+                                             
                                                     <a href="Artiste.html" class="text-dark">@artiste.Prenom  @artiste.Nom </a>
-                                                }
+                                             
                                             }
                                             <br />
                                             <!--Titre de L'image-->

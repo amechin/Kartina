@@ -32,6 +32,7 @@ namespace KartinaProjet
         public System.DateTime DateMiseEnLigne { get; set; }
         public int IdOrientation { get; set; }
         public int IdArtiste { get; set; }
+        public bool IsActive { get; set; }
     
         public virtual Artiste Artiste { get; set; }
         public virtual Orientation Orientation { get; set; }

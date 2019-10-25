@@ -22,6 +22,8 @@ namespace KartinaProjet
     
         public int IdTheme { get; set; }
         public string Libelle { get; set; }
+        public string UrlImage { get; set; }
+        public string Slogan { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Photo> Photo { get; set; }

@@ -28,7 +28,6 @@ namespace KartinaProjet
         public string Facebook { get; set; }
         public string Pinterest { get; set; }
         public string twitter { get; set; }
-        public string Pseudonyme { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Photo> Photo { get; set; }
