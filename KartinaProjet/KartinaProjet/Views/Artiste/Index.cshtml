@@ -1,3 +1,102 @@
+<<<<<<< HEAD
+﻿@model KartinaProjet.Models.ListArtistViewModel
+
+@{
+    ViewBag.Title = "Index";
+}
+
+    <div class="container-fluid m-0 p-0">
+        <h1 class="d-flex justify-content-center">Tous Les Artistes</h1>
+
+        <!-- Bouttons Filtres Lettres-->
+        @*
+        <div class="row mt-3 py-1" id="FiltreLettre">
+            <button type="button" class="btn btn-outline-light col-2 col-md-auto mx-1" value="A" onclick="Filtre(value);">A</button>
+            <button type="button" class="btn btn-outline-light col-2 col-md-auto mx-1" value="B" onclick="Filtre(value);">B</button>
+            <button type="button" class="btn btn-outline-light col-2 col-md-auto mx-1" value="C" onclick="Filtre(value);">C</button>
+            <button type="button" class="btn btn-outline-light col-2 col-md-auto mx-1" value="D" onclick="Filtre(value);">D</button>
+            <button type="button" class="btn btn-outline-light col-2 col-md-auto mx-1" value="E" onclick="Filtre(value);">E</button>
+            <button type="button" class="btn btn-outline-light col-2 col-md-auto mx-1" value="F" onclick="Filtre(value);">F</button>
+            <button type="button" class="btn btn-outline-light col-2 col-md-auto mx-1" value="G" onclick="Filtre(value);">G</button>
+            <button type="button" class="btn btn-outline-light col-2 col-md-auto mx-1" value="H" onclick="Filtre(value);">H</button>
+            <button type="button" class="btn btn-outline-light col-2 col-md-auto mx-1" value="I" onclick="Filtre(value);">I</button>
+            <button type="button" class="btn btn-outline-light col-2 col-md-auto mx-1" value="J" onclick="Filtre(value);">J</button>
+            <button type="button" class="btn btn-outline-light col-2 col-md-auto mx-1" value="K" onclick="Filtre(value);">K</button>
+            <button type="button" class="btn btn-outline-light col-2 col-md-auto mx-1" value="L" onclick="Filtre(value);">L</button>
+            <button type="button" class="btn btn-outline-light col-2 col-md-auto mx-1" value="M" onclick="Filtre(value);">M</button>
+            <button type="button" class="btn btn-outline-light col-2 col-md-auto mx-1" value="N" onclick="Filtre(value);">N</button>
+            <button type="button" class="btn btn-outline-light col-2 col-md-auto mx-1" value="O" onclick="Filtre(value);">O</button>
+            <button type="button" class="btn btn-outline-light col-2 col-md-auto mx-1" value="P" onclick="Filtre(value);">P</button>
+            <button type="button" class="btn btn-outline-light col-2 col-md-auto mx-1" value="Q" onclick="Filtre(value);">Q</button>
+            <button type="button" class="btn btn-outline-light col-2 col-md-auto mx-1" value="R" onclick="Filtre(value);">R</button>
+            <button type="button" class="btn btn-outline-light col-2 col-md-auto mx-1" value="S" onclick="Filtre(value);">S</button>
+            <button type="button" class="btn btn-outline-light col-2 col-md-auto mx-1" value="T" onclick="Filtre(value);">T</button>
+            <button type="button" class="btn btn-outline-light col-2 col-md-auto mx-1" value="U" onclick="Filtre(value);">U</button>
+            <button type="button" class="btn btn-outline-light col-2 col-md-auto mx-1" value="V" onclick="Filtre(value);">V</button>
+            <button type="button" class="btn btn-outline-light col-2 col-md-auto mx-1" value="W" onclick="Filtre(value);">W</button>
+            <button type="button" class="btn btn-outline-light col-2 col-md-auto mx-1" value="X" onclick="Filtre(value);">X</button>
+            <button type="button" class="btn btn-outline-light col-2 col-md-auto mx-1" value="Y" onclick="Filtre(value);">Y</button>
+            <button type="button" class="btn btn-outline-light col-2 col-md-auto mx-1" value="Z" onclick="Filtre(value);">Z</button>
+        </div>
+        *@
+
+    </div>
+    <div class="container-fluid">
+        <div class="row">
+
+            @foreach (var artiste in @Model.ListArtist)
+            {
+                int id = artiste.IdArtiste;
+                bool exist = false;
+                <div class="col-12 col-sm-12 col-md-6 col-lg-4" id="ListArtist">
+                    @foreach (var photo in @Model.FiltredPhoto)
+                    {
+                        if (id == photo.IdArtiste)
+                        {
+                            if (exist == false)
+                            {
+                                <div class="redimension">
+                                    <img src="@photo.LienURL" class="photo mt-5" />
+                                </div>
+
+                                exist = true;
+                            }
+                        }
+                        else
+                        {
+                            exist = false;
+                        }
+                    }
+                    <div class="DescriptionArtiste">
+                        <h6 class="text-dark">
+                            @artiste.Nom
+                            @artiste.Prenom
+                        </h6>
+                        
+                        <div class="DivPresentationArtiste">
+                            <div class="PresentationListArtiste">
+                                <p>
+
+                                    @artiste.Presentation
+
+                                </p>
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-center">
+                            <button type="button" class="btn btn-outline-secondary mb-3">
+                                @Html.ActionLink("Aller sur la page de l'auteur", "Details", "Artiste", new { id = artiste.IdArtiste }, null)
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+        <script type="text/javascript" src="~/Scripts/ArtistePage.js"></script>
+
+    </div>
+
+
+=======
 ﻿@model IEnumerable<KartinaProjet.Artiste>
 
 @{
@@ -81,3 +180,4 @@
     </table>
 </body>
 </html>
+>>>>>>> 70b3d106b9b31c8f2087d29f05253eea7d38fd06

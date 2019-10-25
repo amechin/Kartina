@@ -1,3 +1,190 @@
+<<<<<<< HEAD
+﻿@model KartinaProjet.Models.ArtisteViewModel
+@{
+    ViewBag.Title = "Details";
+}
+
+<html lang="FR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Page Artiste</title>
+</head>
+<body>
+    <div class="container-fluid">
+        <!--Info Artiste-->
+        <div class="">
+            <!-- Nom et Prenom de l'artiste -->
+            <div class="d-flex justify-content-start offset-lg-1">
+                @foreach (var item in Model.FiltredArtist)
+                {
+                        <h1>@item.Nom  @item.Prenom</h1>
+
+
+                }
+            </div>
+            <div class="row mt-4">
+                <div class="col-10 col-sm-10 col-md-5 col-lg-5 offset-1 DivPresentation">
+                    <div class="border border-dark pl-3">
+                        <h3 class="my-2">Biographie</h3>
+                        <!-- Description de L'artiste-->
+                        <div class="Presentation">
+                            @foreach (var item in Model.FiltredArtist)
+                            {
+                                <p>
+                                    @item.Presentation
+                                </p>
+                            }
+                        </div>
+
+                        <span class="points"> 
+                            ...
+                        </span>
+                        <button class="bouton mb-3" id="bouton_texte" onclick="afficher_cacher2('Presentation','DivPresentation','points');">Afficher le texte</button>
+                    
+                    </div>
+                </div>
+
+                <div class="col-sm-8 col-lg-6 px-4 d-flex justify-content-center mx-auto">
+                    <div class="card border-0">
+                        <!--Lien de l'image-->
+                        @foreach (var item in Model.PhotoPresentation)
+                        {
+                            <a href="Artiste.html">
+                                <img src="@item.LienURL" class="card-img-top carte" alt="@item.NomPh">
+                            </a>
+                            <div class="card-body px-0 py-2">
+                                <div class="d-flex justify-content-between">
+                                    <div class="row">
+                                        <h6 class="card-title mb-0 align-middle">
+                                            <!--Nom de l'artiste-->
+                                            @foreach (var artiste in Model.FiltredArtist)
+                                            {
+                                                
+                                                    <a href="@artiste.IdArtiste" class="text-dark">@artiste.Nom  @artiste.Prenom</a>
+                                                
+                                                <br />
+                                                <!--Titre de L'image-->
+                                                <span>
+                                                    <a href="Artiste.html" class="text-dark">@item.NomPh</a>
+                                                </span>
+                                            }
+
+                                        </h6>
+                                    </div>
+                                    <h6 class="card-title font-weight-light mb-1"><small>à partir de</small></h6>
+                                </div>
+                                <div class="d-flex justify-content-between pt-0">
+                                    <h6 class="card-title font-weight-light align-items-center mb-0">
+                                        Edition Limitée
+                                    </h6>
+                                    <h5 class="card-title font-weight-light ">@item.PrixMini €</h5>
+                                </div>
+                            </div>
+                        }
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+        <!--Reseaux-->
+        <div class="d-flex justify-content-center my-4">
+            @foreach (var item in Model.FiltredArtist)
+            {
+                if (item.Facebook != null)
+                {
+                    <a href="@item.Facebook" class="text-dark mx-2">
+                        <i class="fab fa-facebook-f fa-2x"></i>
+                    </a>
+                }
+
+                if (item.twitter != null)
+                {
+                    <a href="@item.twitter" class="text-dark mx-2">
+                        <i class="fab fa-twitter fa-2x"></i>
+                    </a>
+                }
+
+                if (item.Pinterest != null)
+                {
+                    <a href="@item.Pinterest" class="text-dark mx-2">
+                        <i class="fab fa-pinterest-p fa-2x"></i>
+                    </a>
+                }
+            }
+        </div>
+
+
+        <!--Liste Photo-->
+        <div>
+            <h3 class="my-3 text-uppercase">
+                Toutes Les Photographies
+            </h3>
+
+
+            <!-- Toutes les Images-->
+            <div class="row">
+                @foreach (var item in Model.FiltredListPhoto)
+                {
+
+                    <!--Une Image-->
+                    <div class="col-sm-6 col-md-4 px-4 d-flex justify-content-center mb-3">
+                        <div class="card border-0">
+                            <!--Lien de l'image-->
+                            <a href="Artiste.html">
+                                <img src="@item.LienURL" class="card-img-top carte" alt="@item.NomPh">
+                            </a>
+                            <div class="card-body px-0 py-2">
+                                <div class="d-flex justify-content-between">
+                                    <div class="row">
+                                        <h6 class="card-title mb-0 align-middle">
+                                            <!--Nom de l'artiste-->
+
+                                            @foreach (var artiste in Model.FiltredArtist)
+                                            {
+                                             
+                                                    <a href="Artiste.html" class="text-dark">@artiste.Prenom  @artiste.Nom </a>
+                                             
+                                            }
+                                            <br />
+                                            <!--Titre de L'image-->
+                                            <span>
+                                                <a href="Artiste.html" class="text-dark">   @item.NomPh</a>
+                                            </span>
+                                        </h6>
+                                    </div>
+                                    <h6 class="card-title font-weight-light mb-1"><small>à partir de</small></h6>
+                                </div>
+                                <div class="d-flex justify-content-between pt-0">
+                                    <h6 class="card-title font-weight-light align-items-center mb-0">
+                                        Edition Limitée
+                                    </h6>
+                                    <!--<h5 class="card-title font-weight-light ">89<small>,00€</small></h5>-->
+                                    <h5 class="card-title font-weight-light ">@item.PrixMini €</h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                }
+            </div>
+
+
+        </div>
+
+    </div>
+
+
+    <link rel="stylesheet" href="~/Content/font-awesome.css">
+    <script type="text/javascript" src="~/Scripts/ArtistePage.js"></script>
+
+
+
+</body>
+</html>
+=======
 ﻿@model KartinaProjet.Artiste
 
 @{
@@ -88,3 +275,4 @@
     </p>
 </body>
 </html>
+>>>>>>> 70b3d106b9b31c8f2087d29f05253eea7d38fd06
